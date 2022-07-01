@@ -1,14 +1,26 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+// import Home from '../views/Home.vue'
+import layout from '@/layout'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '',
+    name: 'layout',
+    redirect: 'index',
+    component: layout,
+    children: [{
+      path: 'index',
+      component: (resolve) => require(['@/views/index'], resolve),
+      name: 'Index',
+      meta: {
+        title: '首页',
+        icon: 'dashboard',
+        affix: true
+      }
+    }]
   },
   {
     path: '/about',

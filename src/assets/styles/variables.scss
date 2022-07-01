@@ -1,0 +1,14 @@
+// 基础颜色
+$blue: #324157;
+
+// 默认菜单风格
+$base-menu-color:#FFFFFF;
+$base-menu-background:#898797;
+
+$base-sidebar-width: 200px;
+
+:export {
+  menuColor: $base-menu-color;
+  sidebarWidth: $base-sidebar-width;
+  menuBackground: $base-menu-background;
+}
